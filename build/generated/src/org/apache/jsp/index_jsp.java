@@ -53,7 +53,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html lang=\"en\">\n");
       out.write("<head>\n");
-      out.write("  <title>หน้าหลัก</title>\n");
+      out.write("  <title>LOGIN</title>\n");
       out.write("  <meta charset=\"utf-8\">\n");
       out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
       out.write("  <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\n");
@@ -289,8 +289,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    $(\":input\").inputmask();\n");
       out.write("});\n");
       out.write("</script>\n");
-      out.write("</body>\n");
-      out.write("</html>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
