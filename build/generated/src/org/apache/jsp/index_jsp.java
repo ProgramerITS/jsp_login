@@ -41,54 +41,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\n');
+
+ 
+   if(session.getAttribute("status")=="login"){
+            response.sendRedirect("./newjsp.jsp");
+   }
+ 
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html lang=\"en\">\n");
-      out.write("<head>\n");
-      out.write("  <title>login</title>\n");
-      out.write("  <meta charset=\"utf-8\">\n");
-      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
-      out.write("  <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\n");
-      out.write("  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js\"></script>\n");
-      out.write("  <script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>\n");
-      out.write("\n");
-      out.write("  <style>\n");
-      out.write("    /* Remove the navbar's default margin-bottom and rounded borders */ \n");
-      out.write("    .navbar {\n");
-      out.write("      margin-bottom: 0;\n");
-      out.write("      border-radius: 0;\n");
-      out.write("    }\n");
-      out.write("    \n");
-      out.write("    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */\n");
-      out.write("    .row.content {height: 450px}\n");
-      out.write("    \n");
-      out.write("    /* Set gray background color and 100% height */\n");
-      out.write("    .sidenav {\n");
-      out.write("      padding-top: 20px;\n");
-      out.write("      background-color: #f1f1f1;\n");
-      out.write("      height: 100%;\n");
-      out.write("    }\n");
-      out.write("    \n");
-      out.write("    /* Set black background color, white text and some padding */\n");
-      out.write("    footer {\n");
-      out.write("      background-color: #555;\n");
-      out.write("      color: white;\n");
-      out.write("      padding: 15px;\n");
-      out.write("    }\n");
-      out.write("    \n");
-      out.write("    /* On small screens, set height to 'auto' for sidenav and grid */\n");
-      out.write("    @media screen and (max-width: 767px) {\n");
-      out.write("      .sidenav {\n");
-      out.write("        height: auto;\n");
-      out.write("        padding: 15px;\n");
-      out.write("      }\n");
-      out.write("      .row.content {height:auto;} \n");
-      out.write("    }\n");
-      out.write("  </style>\n");
-      out.write("</head>\n");
-      out.write("<body>\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html lang=\"en\">\n");
       out.write("<head>\n");
@@ -214,10 +175,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("          <div class=\"panel-heading\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("              <div class=\"col-xs-6\">\n");
-      out.write("                <a href=\"#\" class=\"active\" id=\"login-form-link\">Login</a>\n");
+      out.write("                <a href=\"#\" class=\"active\" id=\"login-form-link\">เข้าสู่ระบบ</a>\n");
       out.write("              </div>\n");
       out.write("              <div class=\"col-xs-6\">\n");
-      out.write("                <a href=\"#\" id=\"register-form-link\">Register</a>\n");
+      out.write("                <a href=\"#\" id=\"register-form-link\">สมัคร</a>\n");
       out.write("              </div>\n");
       out.write("            </div>\n");
       out.write("            <hr>\n");
@@ -227,19 +188,19 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              <div class=\"col-lg-12\">\n");
       out.write("                <form id=\"login-form\" action=\"main.jsp\" method=\"post\" role=\"form\" style=\"display: block;\">\n");
       out.write("                  <div class=\"form-group\">\n");
-      out.write("                    <input type=\"text\" name=\"usr\" id=\"username\" tabindex=\"1\" class=\"form-control\" placeholder=\"Username\" value=\"\">\n");
+      out.write("                    <input type=\"text\" name=\"usr\" id=\"username\" tabindex=\"1\" class=\"form-control\" placeholder=\"อีเมล์\" value=\"\">\n");
       out.write("                  </div>\n");
       out.write("                  <div class=\"form-group\">\n");
-      out.write("                    <input type=\"password\" name=\"pwd\" id=\"password\" tabindex=\"2\" class=\"form-control\" placeholder=\"Password\">\n");
+      out.write("                    <input type=\"password\" name=\"pwd\" id=\"password\" tabindex=\"2\" class=\"form-control\" placeholder=\"รหัสผ่าน\">\n");
       out.write("                  </div>\n");
       out.write("                  <div class=\"form-group text-center\">\n");
       out.write("                    <input type=\"checkbox\" tabindex=\"3\" class=\"\" name=\"remember\" id=\"remember\">\n");
-      out.write("                    <label for=\"remember\"> Remember Me</label>\n");
+      out.write("                    <label for=\"remember\"> จดจำ</label>\n");
       out.write("                  </div>\n");
       out.write("                  <div class=\"form-group\">\n");
       out.write("                    <div class=\"row\">\n");
       out.write("                      <div class=\"col-sm-6 col-sm-offset-3\">\n");
-      out.write("                        <input type=\"submit\" name=\"login-submit\" id=\"login-submit\" tabindex=\"4\" class=\"form-control btn btn-login\" value=\"Log In\">\n");
+      out.write("                        <input type=\"submit\" name=\"login-submit\" id=\"login-submit\" tabindex=\"4\" class=\"form-control btn btn-login\" value=\"เข้าสู่ระบบ\">\n");
       out.write("                      </div>\n");
       out.write("                    </div>\n");
       out.write("                  </div>\n");
@@ -247,7 +208,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"row\">\n");
       out.write("                      <div class=\"col-lg-12\">\n");
       out.write("                        <div class=\"text-center\">\n");
-      out.write("                          <a href=\"http://phpoll.com/recover\" tabindex=\"5\" class=\"forgot-password\">Forgot Password?</a>\n");
+      out.write("                          <a href=\"#\" tabindex=\"5\" class=\"forgot-password\">Forgot Password?</a>\n");
       out.write("                        </div>\n");
       out.write("                      </div>\n");
       out.write("                    </div>\n");
@@ -272,7 +233,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                  <div class=\"form-group\">\n");
       out.write("                    <div class=\"row\">\n");
       out.write("                      <div class=\"col-sm-6 col-sm-offset-3\">\n");
-      out.write("                        <input type=\"submit\" name=\"register-submit\" id=\"register-submit\" tabindex=\"4\" class=\"form-control btn btn-register\" value=\"Register Now\">\n");
+      out.write("                        <input type=\"submit\" name=\"register-submit\" id=\"register-submit\" tabindex=\"4\" class=\"form-control btn btn-register\" value=\"สมัคเดี๋ยวนี้!!\">\n");
       out.write("                      </div>\n");
       out.write("                    </div>\n");
       out.write("                  </div>\n");
